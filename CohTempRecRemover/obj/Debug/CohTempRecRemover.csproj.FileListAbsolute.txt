@@ -1,0 +1,10 @@
+C:\Users\Mario\source\repos\CohTempRecRemover\CohTempRecRemover\bin\Debug\CohTempRecRemover.exe.config
+C:\Users\Mario\source\repos\CohTempRecRemover\CohTempRecRemover\bin\Debug\CohTempRecRemover.exe
+C:\Users\Mario\source\repos\CohTempRecRemover\CohTempRecRemover\bin\Debug\CohTempRecRemover.pdb
+C:\Users\Mario\source\repos\CohTempRecRemover\CohTempRecRemover\obj\Debug\CohTempRecRemover.csprojAssemblyReference.cache
+C:\Users\Mario\source\repos\CohTempRecRemover\CohTempRecRemover\obj\Debug\CohTempRecRemover.Form1.resources
+C:\Users\Mario\source\repos\CohTempRecRemover\CohTempRecRemover\obj\Debug\CohTempRecRemover.Properties.Resources.resources
+C:\Users\Mario\source\repos\CohTempRecRemover\CohTempRecRemover\obj\Debug\CohTempRecRemover.csproj.GenerateResource.cache
+C:\Users\Mario\source\repos\CohTempRecRemover\CohTempRecRemover\obj\Debug\CohTempRecRemover.csproj.CoreCompileInputs.cache
+C:\Users\Mario\source\repos\CohTempRecRemover\CohTempRecRemover\obj\Debug\CohTempRecRemover.exe
+C:\Users\Mario\source\repos\CohTempRecRemover\CohTempRecRemover\obj\Debug\CohTempRecRemover.pdb
