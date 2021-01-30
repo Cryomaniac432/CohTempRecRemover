@@ -17,7 +17,9 @@ namespace CohTempRecRemover
         private string BtnRunAndStop_TextWhenRunning = "";
         private string TempRecDir = "";
         private string TempRecFullPath = "";
-        private string ErrorMEssage_DirectoryNotFound = "";
+        private string QuestionMessage_Start = "";
+        private string QuestionTitle = "";
+        private string ErrorMessage_DirectoryNotFound = "";
         private string ErrorMessage_DeleteFailed = "";
 
         public Form1()
@@ -29,7 +31,9 @@ namespace CohTempRecRemover
             BtnRunAndStop_TextWhenRunning = BtnRunAndStop_OriginalText.Replace("aktivieren", "stoppen");
             TempRecDir = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\My Games\\Company of Heroes Relaunch\\playback";
             TempRecFullPath = TempRecDir + "\\temp.rec";
-            ErrorMEssage_DirectoryNotFound = "Das Verzeichnis der \"temp.rec\" von \"Company of Heroes\" scheint nicht zu existieren.";
+            QuestionMessage_Start = "Sind Sie sicher, dass sie das automatische Entfernen der \"temp.rec\" auf \"" + TempRecDir + "\" aktivieren möchten?";
+            QuestionTitle = "Sind Sie sicher?";
+            ErrorMessage_DirectoryNotFound = "Das Verzeichnis der \"temp.rec\" von \"Company of Heroes\" scheint nicht zu existieren.";
             ErrorMessage_DeleteFailed = "Bei dem Versuch, eine Vorhandene \"temp.rec\" zu entfernen ist ein Fehler aufgetreten:";
 
             //Labels
@@ -42,13 +46,17 @@ namespace CohTempRecRemover
             LblMessage_Line1.Text = LblMessage_Line2.Text = "";
             if (!TimerRemoveTempRec.Enabled)
             {
-                if (Directory.Exists(TempRecDir))
+                if (MessageBox.Show(QuestionMessage_Start, QuestionTitle, MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
                 {
-                    TimerRemoveTempRec.Start();
-                    BtnRunAndStop.BackColor = Color.Red;
-                    BtnRunAndStop.ForeColor = Color.White;
-                    BtnRunAndStop.Text = BtnRunAndStop_TextWhenRunning;
-                } else { LblMessage_Line1.Text = ErrorMEssage_DirectoryNotFound; }
+                    if (Directory.Exists(TempRecDir))
+                    {
+                        TimerRemoveTempRec.Start();
+                        BtnRunAndStop.BackColor = Color.Red;
+                        BtnRunAndStop.ForeColor = Color.White;
+                        BtnRunAndStop.Text = BtnRunAndStop_TextWhenRunning;
+                    }
+                    else { LblMessage_Line1.Text = ErrorMessage_DirectoryNotFound; }
+                }
             } else
             {
                 TimerRemoveTempRec.Stop();
