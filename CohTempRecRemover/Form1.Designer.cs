@@ -87,9 +87,9 @@
             this.LblHowTo_Line2.AutoSize = true;
             this.LblHowTo_Line2.Location = new System.Drawing.Point(12, 61);
             this.LblHowTo_Line2.Name = "LblHowTo_Line2";
-            this.LblHowTo_Line2.Size = new System.Drawing.Size(363, 13);
+            this.LblHowTo_Line2.Size = new System.Drawing.Size(383, 13);
             this.LblHowTo_Line2.TabIndex = 4;
-            this.LblHowTo_Line2.Text = "Klicken Sie erneut auf diesen Knopf um diese Automatik wieder zu stoppen.";
+            this.LblHowTo_Line2.Text = "Klicken Sie erneut auf diesen Knopf um diese Automatik wieder zu deaktivieren.";
             // 
             // LblMessage_Line1
             // 
