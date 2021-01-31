@@ -23,6 +23,8 @@ namespace CohTempRecRemover
         private string ErrorMessage_DirectoryNotFound = "";
         private string ErrorMessage_DeleteFailed = "";
 
+        private int RemovalsSinceEnabled = 0;
+
         public Form1()
         {
             InitializeComponent();
@@ -45,6 +47,8 @@ namespace CohTempRecRemover
                 {
                     if (Directory.Exists(TempRecDir))
                     {
+                        RemovalsSinceEnabled = 0;
+                        UpdateLblRemovalCounter();
                         TimerRemoveTempRec.Start();
                         BtnRunAndStop.BackColor = Color.Red;
                         BtnRunAndStop.ForeColor = Color.White;
@@ -65,7 +69,12 @@ namespace CohTempRecRemover
         {
             if (File.Exists(TempRecFullPath))
             {
-                try { File.Delete(TempRecFullPath); } catch (Exception exc)
+                try
+                {
+                    File.Delete(TempRecFullPath);
+                    RemovalsSinceEnabled++;
+                    UpdateLblRemovalCounter();
+                } catch (Exception exc)
                 {
                     LblMessage_Line1.Text = ErrorMessage_DeleteFailed;
                     LblMessage_Line2.Text = exc.Message;
@@ -86,7 +95,7 @@ namespace CohTempRecRemover
         {
             this.Text = "automatischer \"temp.rec\"-Entferner für \"Company of Heroes\"";
             LblTitle_Line1.Text = "Dieses Programm entfernt automatisch die \"temp.rec\" von \"Company of Heroes\", um Spielabstürze vorzubeugen.";
-            LblTitle_Line2.Text = "Diese befindet sich im jeweiligen Benutzer-Ordner unter \"Documents\\My Games\\Company of Heroes Relaunch\\playback\".";
+            LblTitle_Line2.Text = "Diese sollte sich im jeweiligen Benutzer-Ordner unter \"Documents\\My Games\\Company of Heroes Relaunch\\playback\" befinden.";
             LblHowTo_Line1.Text = "Klicken Sie einfach auf den Knopf unten, um diese oben beschriebene Automatik zu aktivieren.";
             LblHowTo_Line2.Text = "Klicken Sie erneut auf diesen Knopf um diese Automatik wieder zu deaktivieren.";
             BtnRunAndStop_OriginalText = "automatisches Entfernen der \"temp.rec\" aktivieren";
@@ -95,6 +104,7 @@ namespace CohTempRecRemover
             QuestionTitle = "Sind Sie sicher?";
             ErrorMessage_DirectoryNotFound = "Das Verzeichnis der \"temp.rec\" von \"Company of Heroes\" scheint nicht zu existieren.";
             ErrorMessage_DeleteFailed = "Bei dem Versuch, eine Vorhandene \"temp.rec\" zu entfernen ist ein Fehler aufgetreten:";
+            LblRemovalCount.Text = "Entfernungen seit Aktivierung: 0";
         }
 
         private void InitTextes_English()
@@ -110,6 +120,21 @@ namespace CohTempRecRemover
             QuestionTitle = "Are you sure?";
             ErrorMessage_DirectoryNotFound = "The Directory of the \"temp.rec\" of \"Company of Heroes\" doesn't seem to exist.";
             ErrorMessage_DeleteFailed = "An attempt to remove an existing \"temp.rec\" failed:";
+            LblRemovalCount.Text = "removals since enabled: 0";
+        }
+
+        private void UpdateLblRemovalCounter()
+        {
+            string[] lblRemovalCount_TextParts = LblRemovalCount.Text.Split(':');
+            if (lblRemovalCount_TextParts.Length == 2)
+            {
+                string strCurrentRemovalCount = lblRemovalCount_TextParts[1].Trim();
+                int currentRemovalCount = 0;
+                if (int.TryParse(strCurrentRemovalCount, out currentRemovalCount))
+                {
+                    LblRemovalCount.Text = lblRemovalCount_TextParts[0] + ": " + RemovalsSinceEnabled.ToString();
+                }
+            }
         }
     }
 }

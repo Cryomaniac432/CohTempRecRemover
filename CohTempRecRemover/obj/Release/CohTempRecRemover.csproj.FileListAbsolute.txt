@@ -7,4 +7,3 @@ D:\Eigene Dateien\Dokumente\Visual Studio Projects\CohTempRecRemover\CohTempRecR
 D:\Eigene Dateien\Dokumente\Visual Studio Projects\CohTempRecRemover\CohTempRecRemover\obj\Release\CohTempRecRemover.csproj.CoreCompileInputs.cache
 D:\Eigene Dateien\Dokumente\Visual Studio Projects\CohTempRecRemover\CohTempRecRemover\obj\Release\CohTempRecRemover.exe
 D:\Eigene Dateien\Dokumente\Visual Studio Projects\CohTempRecRemover\CohTempRecRemover\obj\Release\CohTempRecRemover.pdb
-D:\Eigene Dateien\Dokumente\Visual Studio Projects\CohTempRecRemover\CohTempRecRemover\obj\Release\CohTempRecRemover.csprojAssemblyReference.cache

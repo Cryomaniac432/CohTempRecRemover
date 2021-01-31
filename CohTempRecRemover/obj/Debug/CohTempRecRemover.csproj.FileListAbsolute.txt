@@ -11,7 +11,6 @@ C:\Users\Mario\source\repos\CohTempRecRemover\CohTempRecRemover\obj\Debug\CohTem
 D:\Eigene Dateien\Dokumente\Visual Studio Projects\CohTempRecRemover\CohTempRecRemover\bin\Debug\CohTempRecRemover.exe.config
 D:\Eigene Dateien\Dokumente\Visual Studio Projects\CohTempRecRemover\CohTempRecRemover\bin\Debug\CohTempRecRemover.exe
 D:\Eigene Dateien\Dokumente\Visual Studio Projects\CohTempRecRemover\CohTempRecRemover\bin\Debug\CohTempRecRemover.pdb
-D:\Eigene Dateien\Dokumente\Visual Studio Projects\CohTempRecRemover\CohTempRecRemover\obj\Debug\CohTempRecRemover.csprojAssemblyReference.cache
 D:\Eigene Dateien\Dokumente\Visual Studio Projects\CohTempRecRemover\CohTempRecRemover\obj\Debug\CohTempRecRemover.Form1.resources
 D:\Eigene Dateien\Dokumente\Visual Studio Projects\CohTempRecRemover\CohTempRecRemover\obj\Debug\CohTempRecRemover.Properties.Resources.resources
 D:\Eigene Dateien\Dokumente\Visual Studio Projects\CohTempRecRemover\CohTempRecRemover\obj\Debug\CohTempRecRemover.csproj.GenerateResource.cache

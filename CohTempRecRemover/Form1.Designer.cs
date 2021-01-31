@@ -38,6 +38,7 @@
             this.TimerRemoveTempRec = new System.Windows.Forms.Timer(this.components);
             this.LblMessage_Line2 = new System.Windows.Forms.Label();
             this.LblVersion = new System.Windows.Forms.Label();
+            this.LblRemovalCount = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // LblTitle_Line1
@@ -55,10 +56,10 @@
             this.LblTitle_Line2.AutoSize = true;
             this.LblTitle_Line2.Location = new System.Drawing.Point(12, 22);
             this.LblTitle_Line2.Name = "LblTitle_Line2";
-            this.LblTitle_Line2.Size = new System.Drawing.Size(586, 13);
+            this.LblTitle_Line2.Size = new System.Drawing.Size(616, 13);
             this.LblTitle_Line2.TabIndex = 1;
-            this.LblTitle_Line2.Text = "Diese befindet sich im jeweiligen Benutzer-Ordner unter \"Documents\\My Games\\Compa" +
-    "ny of Heroes Relaunch\\playback\".";
+            this.LblTitle_Line2.Text = "Diese sollte sich im jeweiligen Benutzer-Ordner unter \"Documents\\My Games\\Company" +
+    " of Heroes Relaunch\\playback\" befinden.";
             // 
             // BtnRunAndStop
             // 
@@ -125,11 +126,21 @@
             this.LblVersion.TabIndex = 7;
             this.LblVersion.Text = "Version";
             // 
+            // LblRemovalCount
+            // 
+            this.LblRemovalCount.AutoSize = true;
+            this.LblRemovalCount.Location = new System.Drawing.Point(302, 82);
+            this.LblRemovalCount.Name = "LblRemovalCount";
+            this.LblRemovalCount.Size = new System.Drawing.Size(158, 13);
+            this.LblRemovalCount.TabIndex = 8;
+            this.LblRemovalCount.Text = "Entfernungen seit Aktivierung: 0";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(673, 144);
+            this.Controls.Add(this.LblRemovalCount);
             this.Controls.Add(this.LblVersion);
             this.Controls.Add(this.LblMessage_Line2);
             this.Controls.Add(this.LblMessage_Line1);
@@ -158,5 +169,6 @@
         private System.Windows.Forms.Timer TimerRemoveTempRec;
         private System.Windows.Forms.Label LblMessage_Line2;
         private System.Windows.Forms.Label LblVersion;
+        private System.Windows.Forms.Label LblRemovalCount;
     }
 }
